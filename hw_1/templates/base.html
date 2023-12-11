@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Интернет-магазин{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <h1>Интернет-магазин</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('base') }}">Главная</a></li>
+                <li><a href="{{ url_for('clothing') }}">Одежда</a></li>
+                <li><a href="{{ url_for('shoes') }}">Обувь</a></li>
+                <li><a href="{{ url_for('jacket') }}">Куртка</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Интернет-магазин</p>
+    </footer>
+</body>
+
+</html>
